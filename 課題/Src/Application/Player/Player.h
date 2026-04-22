@@ -1,5 +1,5 @@
 #pragma once
-#include "../Base/CharaBase.h"
+#include "../Base/Chara/CharaBase.h"
 
 class Player : public CharaBase
 {
