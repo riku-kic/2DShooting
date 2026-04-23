@@ -2,17 +2,17 @@
 
 class CharaBase
 {
-protected:
+public:
 
 	CharaBase() {}
-	~CharaBase() { Release(); }
+	virtual~CharaBase() {}
 
-	void Update();
-	void Draw();
-	void Init();
-	void Release();
+	virtual void Update();
+	virtual void Draw();
+	virtual void Init();
+	virtual void Release();
 
-public:
+protected:
 
 	KdTexture m_tex;
 	Math::Matrix m_mat;
