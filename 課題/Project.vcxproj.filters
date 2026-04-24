@@ -76,6 +76,15 @@
     <Filter Include="Texture">
       <UniqueIdentifier>{e46532b5-a5b5-4efb-a4aa-5f6fca8f85e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Scene\SceneManager">
+      <UniqueIdentifier>{9b4aab83-e29d-4be5-b0f7-ac146e59b24a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Bullet">
+      <UniqueIdentifier>{afe16716-9255-4a31-8ff7-68c818dc9604}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Bullet\PlayerBullet">
+      <UniqueIdentifier>{71e3a1e7-a73d-4dc6-a51a-bb49234a5879}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -195,6 +204,12 @@
     <ClInclude Include="Src\Application\IncPath\IncPath.h">
       <Filter>Src\Application\IncPath</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Scene\SceneManager\SceneManager.h">
+      <Filter>Src\Application\Scene\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Bullet\PlayerBullet\PlayerBullet.h">
+      <Filter>Src\Application\Bullet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -283,6 +298,12 @@
     </ClCompile>
     <ClCompile Include="Src\Application\IncPath\IncPath.cpp">
       <Filter>Src\Application\IncPath</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Scene\SceneManager\SceneManager.cpp">
+      <Filter>Src\Application\Scene\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Bullet\PlayerBullet\PlayerBullet.cpp">
+      <Filter>Src\Application\Bullet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

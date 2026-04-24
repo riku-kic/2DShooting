@@ -1,17 +1,19 @@
-#include "SceneBase.cpp"
+#pragma once
 
-void SceneBase::Update()
-{
-}
+class SceneBase {
+public:
+	SceneBase() {};
+	~SceneBase() { Release(); };
 
-void SceneBase::Draw()
-{
-}
+	void Update();
+	void Init();
+	void Draw();
+	void Release();
 
-void SceneBase::Init()
-{
-}
+protected:
 
-void SceneBase::Release()
-{
-}
+	KdTexture m_tex;
+	Math::Matrix m_mat;
+	Math::Vector2 m_pos;
+
+};

@@ -161,6 +161,7 @@
     <ClInclude Include="..\Library\tinygltf\tiny_gltf.h" />
     <ClInclude Include="Src\Application\Base\Chara\CharaBase.h" />
     <ClInclude Include="Src\Application\Base\Scene\SceneBase.h" />
+    <ClInclude Include="Src\Application\Bullet\PlayerBullet\PlayerBullet.h" />
     <ClInclude Include="Src\Application\Enemy\Enemy.h" />
     <ClInclude Include="Src\Application\IncPath\IncPath.h" />
     <ClInclude Include="Src\Application\Player\Player.h" />
@@ -168,6 +169,7 @@
     <ClInclude Include="Src\Application\main.h" />
     <ClInclude Include="Src\Application\Scene\GameScene\GameScene.h" />
     <ClInclude Include="Src\Application\Scene\ResultScene\ResultScene.h" />
+    <ClInclude Include="Src\Application\Scene\SceneManager\SceneManager.h" />
     <ClInclude Include="Src\Application\Scene\TitleScene\TitleScene.h" />
     <ClInclude Include="Src\System\Audio\KdAudio.h" />
     <ClInclude Include="src\System\Direct3D\KdDirect3D.h" />
@@ -194,6 +196,7 @@
     <ClCompile Include="..\Library\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Src\Application\Base\Chara\CharaBase.cpp" />
     <ClCompile Include="Src\Application\Base\Scene\SceneBase.cpp" />
+    <ClCompile Include="Src\Application\Bullet\PlayerBullet\PlayerBullet.cpp" />
     <ClCompile Include="Src\Application\Enemy\Enemy.cpp" />
     <ClCompile Include="Src\Application\IncPath\IncPath.cpp" />
     <ClCompile Include="Src\Application\Player\Player.cpp" />
@@ -201,6 +204,7 @@
     <ClCompile Include="Src\Application\main.cpp" />
     <ClCompile Include="Src\Application\Scene\GameScene\GameScene.cpp" />
     <ClCompile Include="Src\Application\Scene\ResultScene\ResultScene.cpp" />
+    <ClCompile Include="Src\Application\Scene\SceneManager\SceneManager.cpp" />
     <ClCompile Include="Src\Application\Scene\TitleScene\TitleScene.cpp" />
     <ClCompile Include="Src\System\Audio\KdAudio.cpp" />
     <ClCompile Include="src\System\Direct3D\KdDirect3D.cpp" />

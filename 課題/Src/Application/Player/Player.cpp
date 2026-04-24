@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "../Bullet/PlayerBullet/PlayerBullet.h"
 
 void Player::Update()
 {
@@ -98,6 +99,7 @@ void Player::Update()
 
 	}
 
+	
 	m_mat = Math::Matrix::CreateTranslation(m_pos.x, m_pos.y, 0);
 	m_playerHitBoxMat = Math::Matrix::CreateTranslation(m_pos.x, m_pos.y - 5, 0);
 
@@ -118,8 +120,9 @@ void Player::Init()
 {
 	m_tex.Load("Texture/Player.png");
 	m_playerHitBoxTex.Load("Texture/PlayerHitBox.png");
-	m_bulletTex.Load("Texture/Bullet.png");
 	m_pos = { 0,-250 };
+
+	PlayerBullet::GetInstance().SetPlayerPos(m_pos);
 
 }
 
@@ -127,4 +130,5 @@ void Player::Init()
 void Player::Release()
 {
 	m_tex.Release();
+	m_playerHitBoxTex.Release();
 }
