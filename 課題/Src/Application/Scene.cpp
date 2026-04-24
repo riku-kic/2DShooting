@@ -1,23 +1,36 @@
 #include "main.h"
 #include "Scene.h"
+//#include "IncPath/IncPath.h"
+#include "Player/Player.h"
 
 void Scene::Draw2D()
 {
+
+	//SHADER.m_spriteShader.SetMatrix(matrix);
+	//SHADER.m_spriteShader.DrawTex(&charaTex, Math::Rectangle(0, 0, 64, 64), 1.0f);
+	
+	m_player->Draw();
+
+
 	// •¶š—ñ•\¦
-	// SHADER.m_spriteShader.DrawString(0, 0, "Hello World", Math::Vector4(1, 1, 0, 1));
+	//SHADER.m_spriteShader.DrawString(0, 0, "Hello World", Math::Vector4(1, 1, 0, 1));
+	
 }
 
 void Scene::Update()
 {
-	
+	m_player->Update();
 }
 
 void Scene::Init()
 {
+	m_player = std::make_shared<Player>();
+	m_player->Init();
+
 	// ‰æ‘œ‚Ì“Ç‚İ‚İˆ—
-	charaTex.Load("player.png");
+	//charaTex.Load("Texture/Player.png");
 
-
+	matrix = Math::Matrix::CreateTranslation(0, 0, 0);
 }
 
 void Scene::Release()

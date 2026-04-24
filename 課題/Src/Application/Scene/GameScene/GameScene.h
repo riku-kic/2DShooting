@@ -4,7 +4,7 @@ class Player;
 
 class GameScene
 {
-private:
+public:
 
 	GameScene() {}
 	~GameScene() { Release(); }
@@ -14,7 +14,7 @@ private:
 	void Init();
 	void Release();
 
-public:
+private:
 
 
 

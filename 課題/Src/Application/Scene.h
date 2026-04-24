@@ -11,6 +11,8 @@ private:
 	// 行列 ・・・ 座標などの情報
 	Math::Matrix matrix;
 
+	std::shared_ptr<Player> m_player;
+
 public:
 
 	// 初期設定
