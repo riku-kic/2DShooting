@@ -208,7 +208,7 @@
       <Filter>Src\Application\Scene\SceneManager</Filter>
     </ClInclude>
     <ClInclude Include="Src\Application\Bullet\PlayerBullet\PlayerBullet.h">
-      <Filter>Src\Application\Bullet</Filter>
+      <Filter>Src\Application\Bullet\PlayerBullet</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -303,7 +303,7 @@
       <Filter>Src\Application\Scene\SceneManager</Filter>
     </ClCompile>
     <ClCompile Include="Src\Application\Bullet\PlayerBullet\PlayerBullet.cpp">
-      <Filter>Src\Application\Bullet</Filter>
+      <Filter>Src\Application\Bullet\PlayerBullet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,7 @@
 #pragma once
 #include "../Base/Chara/CharaBase.h"
-#include "../Bullet/PlayerBullet/PlayerBullet.h"
 
+// Player ‚Æ‘ŠŒİQÆ‚·‚é‚¾‚¯‚È‚ç‘O•ûéŒ¾‚Å\•ª
 class PlayerBullet;
 
 class Player : public CharaBase
@@ -14,11 +14,15 @@ public:
 	void Update()override;
 	void Draw()override;
 	void Init()override;
-	
+	void Release()override;
+
+	Math::Vector2 SetPlayerPos(){ return m_pos; }
 
 private:
 
-	void Release()override;
+	
+
+	PlayerBullet* m_bullet;
 
 	KdTexture m_tex;
 	KdTexture m_playerHitBoxTex;
@@ -26,11 +30,14 @@ private:
 	Math::Matrix m_mat;
 	Math::Matrix m_playerHitBoxMat;
 
-	Math::Vector2 m_pos = { };
+	Math::Vector2 m_pos;
+	//Math::Vector2 m_pos2;
 
-	static const int BulletNum = 30;
+	float m_delayTime;
 
-	PlayerBullet* m_bullet[BulletNum];
+	bool keyDown;
+
+
 
 public:
 	static Player& GetInstance()

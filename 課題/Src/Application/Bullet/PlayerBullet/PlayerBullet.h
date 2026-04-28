@@ -1,32 +1,42 @@
 #pragma once
 
-class PlayerBullet
+#include "../../Base/Chara/CharaBase.h"
+
+// forward
+class Player;
+
+class PlayerBullet : public CharaBase
 {
 public:
-	PlayerBullet(){}
+	PlayerBullet() {  }
 	~PlayerBullet() { Release(); }
 
-	void Init();
-	void Update();
-	void Draw();
+	void Update() override;
+	void Draw() override;
+	void Init() override;
 	void Release();
 
-	void SetPlayerPos(Math::Vector2 _pos) { m_pos = _pos; }
+	void GetPlayerPos(Math::Vector2 _m_pos) { m_pos = _m_pos; }
 
+	Player* m_player = nullptr;
+
+	Math::Vector2 m_pos = { 0,0 };
+
+	bool m_alive = false;
 private:
+	// 既存のプレイヤーインスタンスを参照する
+	
+
 	KdTexture m_tex;
 
 	Math::Matrix m_mat;
 
-	Math::Vector2 m_pos = {};
-
-	bool alive;
-
-	static const int mapHeght = 1280;
+	static const int mapHeight = 1280;
 	static const int mapWidth = 720;
+	static const int m_move = 10;
 
-// シングルトン
-private:
+	
+	// 他のメンバは必要に応じて維持してください
 
 
 public:
@@ -37,4 +47,4 @@ public:
 	}
 };
 
-#define P_BLT PlayerBullet::GetInstance()
+#define P_BUL PlayerBullet::GetInstance()

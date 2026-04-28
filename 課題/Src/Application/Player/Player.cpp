@@ -47,6 +47,7 @@ void Player::Update()
 					m_pos.x -= 4.0f;
 				}
 			}
+
 		}
 
 		//xboxƒRƒ“
@@ -99,10 +100,10 @@ void Player::Update()
 
 	}
 
-	
+	//m_bullet->GetPlayerPos(m_pos);
+
 	m_mat = Math::Matrix::CreateTranslation(m_pos.x, m_pos.y, 0);
 	m_playerHitBoxMat = Math::Matrix::CreateTranslation(m_pos.x, m_pos.y - 5, 0);
-
 }
 
 void Player::Draw()
@@ -113,19 +114,22 @@ void Player::Draw()
 	SHADER.m_spriteShader.SetMatrix(m_playerHitBoxMat);
 	SHADER.m_spriteShader.DrawTex(&m_playerHitBoxTex, Math::Rectangle(0, 0, 11, 13), 1.0f);
 
+	m_delayTime = 0;
+
 	//SHADER.m_spriteShader.DrawString(0, 0, "Hello World", Math::Vector4(1, 1, 0, 1));
 }
 
 void Player::Init()
 {
+	m_bullet = &P_BUL;
+
 	m_tex.Load("Texture/Player.png");
 	m_playerHitBoxTex.Load("Texture/PlayerHitBox.png");
 	m_pos = { 0,-250 };
 
-	PlayerBullet::GetInstance().SetPlayerPos(m_pos);
+	keyDown = false;
 
 }
-
 
 void Player::Release()
 {

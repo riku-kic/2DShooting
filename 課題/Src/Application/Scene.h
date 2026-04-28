@@ -1,5 +1,6 @@
 #pragma once
 class Player;
+class GameScene;
 
 class Scene
 {
@@ -12,6 +13,8 @@ private:
 	Math::Matrix matrix;
 
 	std::shared_ptr<Player> m_player;
+
+	std::shared_ptr<GameScene> m_gameScene;
 
 public:
 

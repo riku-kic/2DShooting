@@ -4,9 +4,10 @@
 
 void Scene::Draw2D()
 {
-	m_player->Draw();
-	//PlayerBullet::GetInstance().Draw();
+	m_gameScene->Draw();
 
+	//m_player->Draw();
+	 
 	// •¶Žš—ñ•\Ž¦
 	//SHADER.m_spriteShader.DrawString(0, 0, "Hello World", Math::Vector4(1, 1, 0, 1));
 	
@@ -14,14 +15,18 @@ void Scene::Draw2D()
 
 void Scene::Update()
 {
-	m_player->Update();
-	PlayerBullet::GetInstance().Update();
+	m_gameScene->Update();
+	
 }
 
 void Scene::Init()
 {
-	m_player = std::make_shared<Player>();
-	m_player->Init();
+	/*m_player = std::make_shared<Player>();
+	m_player->Init();*/
+
+	m_gameScene = std::make_shared<GameScene>();
+	m_gameScene->Init();
+
 	//PlayerBullet::GetInstance().Init();
 
 	// ‰æ‘œ‚Ì“Ç‚Ýž‚Ýˆ—
@@ -34,6 +39,7 @@ void Scene::Release()
 {
 	// ‰æ‘œ‚Ì‰ð•úˆ—
 	charaTex.Release();
+	m_gameScene->Release();
 }
 
 void Scene::ImGuiUpdate()
