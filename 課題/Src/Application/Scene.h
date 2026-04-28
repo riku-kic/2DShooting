@@ -1,6 +1,7 @@
 #pragma once
 class Player;
 class GameScene;
+class Enemy;
 
 class Scene
 {
@@ -15,6 +16,8 @@ private:
 	std::shared_ptr<Player> m_player;
 
 	std::shared_ptr<GameScene> m_gameScene;
+
+	std::shared_ptr<Enemy> m_enemy;
 
 public:
 

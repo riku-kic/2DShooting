@@ -25,7 +25,12 @@ void GameScene::Update()
 					// 必要なら生存フラグも立てる
 					playerBullet->m_alive = true;
 
+					std::shared_ptr<Enemy> enemy;
+					enemy = std::make_shared<Enemy>();	// インスタンス生成
+					enemy->m_pBullet = playerBullet->m_pos;
+
 					m_objList.push_back(playerBullet);					// リストへ追加
+					m_objList.push_back(enemy);					// リストへ追加
 
 				}
 				m_delayTime = 5;
@@ -63,6 +68,12 @@ void GameScene::Init()
 	m_BAlive = false;
 
 	PLAYER.GetInstance().Init();
+
+	std::shared_ptr<Enemy> enemy;
+	enemy = std::make_shared<Enemy>();	// インスタンス生成
+	enemy->Init();	// 初期
+	m_objList.push_back(enemy);					// リストへ追加
+
 
 	// 追加：シーンが保持する共有プレイヤー参照をセット
 	//m_player = player;

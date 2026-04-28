@@ -27,6 +27,9 @@ void Scene::Init()
 	m_gameScene = std::make_shared<GameScene>();
 	m_gameScene->Init();
 
+	m_enemy = std::make_shared<Enemy>();
+;
+
 	//PlayerBullet::GetInstance().Init();
 
 	// ‰æ‘œ‚Ì“Ç‚Ýž‚Ýˆ—
@@ -44,7 +47,7 @@ void Scene::Release()
 
 void Scene::ImGuiUpdate()
 {
-	return;
+	//return;
 
 	ImGui::SetNextWindowPos(ImVec2(20, 20), ImGuiSetCond_Once);
 	ImGui::SetNextWindowSize(ImVec2(200, 100), ImGuiSetCond_Once);
@@ -53,6 +56,7 @@ void Scene::ImGuiUpdate()
 	if (ImGui::Begin("Debug Window"))
 	{
 		ImGui::Text("FPS : %d", APP.m_fps);
+		ImGui::Text("x : %f", m_enemy->m_pos.x);
 	}
 	ImGui::End();
 }

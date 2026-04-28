@@ -1,5 +1,6 @@
 #include "PlayerBullet.h"
 #include "../../Player/Player.h"
+#include "../../Enemy/Enemy.h"
 
 void PlayerBullet::Update()
 {
@@ -15,7 +16,9 @@ void PlayerBullet::Update()
 		m_alive = false;
 	}
 	
-		m_mat = Math::Matrix::CreateTranslation(m_pos.x, m_pos.y, 0);
+	//m_enemy->GetPlayerBullet(m_pos);
+
+	m_mat = Math::Matrix::CreateTranslation(m_pos.x, m_pos.y, 0);
 }
 
 void PlayerBullet::Draw()
@@ -31,6 +34,7 @@ void PlayerBullet::Init()
 {
 	// 新しく生成せず、既存のプレイヤーインスタンスを参照する
 	m_player = &PLAYER;
+	m_enemy = &ENEMY;
 
 	m_pos = m_player->SetPlayerPos();
 

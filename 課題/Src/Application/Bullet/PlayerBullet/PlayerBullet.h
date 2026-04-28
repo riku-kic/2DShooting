@@ -4,6 +4,7 @@
 
 // forward
 class Player;
+class Enemy;
 
 class PlayerBullet : public CharaBase
 {
@@ -19,6 +20,8 @@ public:
 	void GetPlayerPos(Math::Vector2 _m_pos) { m_pos = _m_pos; }
 
 	Player* m_player = nullptr;
+
+	Enemy* m_enemy = nullptr;
 
 	Math::Vector2 m_pos = { 0,0 };
 

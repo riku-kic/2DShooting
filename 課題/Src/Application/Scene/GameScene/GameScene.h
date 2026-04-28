@@ -30,7 +30,7 @@ private:
 	bool keyDown;
 	bool m_BAlive;
 
-	static const int BulletNum = 70;
+	static const int BulletNum = 20;
 
 	KdTexture m_tex;
 	KdTexture m_playerHitBoxTex;
